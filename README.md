@@ -29,7 +29,7 @@ A full-stack movie recommendation application built with React frontend and Node
 ## Project Structure
 
 ```text
-Movie-Rec-React/
+Movie-Recommendations/
 ├── frontend/           # React frontend application
 │   ├── src/
 │   │   ├── components/ # Reusable UI components
@@ -58,7 +58,7 @@ Movie-Rec-React/
 
    ```bash
    git clone <repository-url>
-   cd Movie-Rec-React
+   cd Movie-Recommendations
    ```
 2. **Set up the backend**
 
@@ -69,7 +69,7 @@ Movie-Rec-React/
 4. **Set up the frontend**
 
    ```bash
-   cd ../frontend
+   cd frontend
    npm install
    ```
 
