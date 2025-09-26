@@ -94,7 +94,3 @@ Movie-Rec-React/
 3. **Open your browser**
 
    Navigate to `http://localhost:5173` to use the application
-
-## License
-
-This project is licensed under the MIT License.
