@@ -57,7 +57,7 @@ Movie-Rec-React/
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/toantran980/Movie-Recommendations.git>
    cd Movie-Rec-React
    ```
 2. **Set up the backend**
@@ -66,7 +66,7 @@ Movie-Rec-React/
    cd backend
    npm install
    ```
-4. **Set up the frontend**
+3. **Set up the frontend**
 
    ```bash
    cd ../frontend
@@ -81,7 +81,6 @@ Movie-Rec-React/
    cd backend
    npm run dev
    ```
-
    The backend will run on `http://localhost:5000`
 2. **Start the frontend development server**
 
@@ -89,7 +88,6 @@ Movie-Rec-React/
    cd frontend
    npm run dev
    ```
-
    The frontend will run on `http://localhost:5173`
 3. **Open your browser**
 
