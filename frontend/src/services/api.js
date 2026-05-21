@@ -14,3 +14,15 @@ export const searchMovies = async (query) => {
     const data = await response.json();
     return data;
 };
+
+export const getGenres = async () => {
+    const response = await fetch(`${BASE_URL}/movies/genres`);
+    const data = await response.json();
+    return data;
+};
+
+export const getMovieDetails = async (id) => {
+    const response = await fetch(`${BASE_URL}/movies/${id}`);
+    const data = await response.json();
+    return data;
+};

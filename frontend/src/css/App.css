@@ -1,8 +1,16 @@
 .main-content {
   flex: 1;
-  padding: 2rem;
+  padding: 80px 2rem 2rem; /* Add top padding to account for fixed glassmorphic header */
   box-sizing: border-box;
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 70px 1rem 1.5rem;
+  }
 }
