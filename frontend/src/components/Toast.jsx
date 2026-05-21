@@ -6,10 +6,17 @@ function Toast() {
 
     if (!toast) return null;
 
+    const icons = {
+        success: "✅",
+        info: "ℹ️",
+        error: "❌",
+    };
+
     return (
         <div className="toast-container">
             <div className={`toast-message ${toast.type}`}>
-                {toast.message}
+                <span className="toast-icon">{icons[toast.type] || icons.info}</span>
+                <span>{toast.message}</span>
             </div>
         </div>
     );

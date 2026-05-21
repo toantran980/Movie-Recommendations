@@ -1,17 +1,13 @@
 import "../css/MovieCard.css"
 import { useMovieContext } from "../contexts/MovieContext"
 
-function MovieCard({ movie, onCardClick }) {
-    // The {} syntax is called destructuring assignment
-    // extract values from an object and assign them to variables
+function MovieCard({ movie, onCardClick, delay = 0 }) {
     const { isFavorite, addToFavorites, removeFromFavorites, favorites } = useMovieContext()
     const favorite = isFavorite(movie.id)
 
-    // Check if there is a personal rating from favorites
     const favItem = favorites.find(f => f.id === movie.id)
     const personalRating = favItem?.rating || 0
 
-    // Prevent the default action and stop propagation to avoid opening details modal
     function onFavoriteClick(e) {
         e.preventDefault()
         e.stopPropagation()
@@ -20,7 +16,11 @@ function MovieCard({ movie, onCardClick }) {
     }
 
     return (
-        <div className="movie-card" onClick={() => onCardClick && onCardClick(movie.id)}>
+        <div
+            className="movie-card"
+            style={{ animationDelay: `${delay}ms` }}
+            onClick={() => onCardClick && onCardClick(movie.id)}
+        >
             {personalRating > 0 && (
                 <div className="user-personal-rating">
                     ★ {personalRating}
@@ -34,6 +34,7 @@ function MovieCard({ movie, onCardClick }) {
                     } 
                     alt={movie.title}
                 />
+                <div className="movie-score-badge">★ {movie.vote_average?.toFixed(1) || '0.0'}</div>
                 <div className="movie-overlay">
                     <button className={`favorite-btn ${favorite ? "active" : ""}`} onClick={onFavoriteClick}>
                         ♥
